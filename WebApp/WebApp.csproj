@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{216324F9-CC0A-4248-AC45-3EF4A613796F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApp1</RootNamespace>
+    <AssemblyName>WebApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\System.Net.Http.dll" />
+    <Content Include="bin\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\System.Web.Http.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.xml" />
+    <Content Include="bin\System.Web.Http.xml" />
+    <Content Include="bin\WebApp1.dll" />
+    <Content Include="bin\WebApp1.pdb" />
+    <Content Include="css\style.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\Controllers\app.js" />
+    <Content Include="Scripts\Controllers\ClubTravel\ctrlClubTravel.js" />
+    <Content Include="Scripts\Controllers\main.js" />
+    <Content Include="Scripts\Vendors\angular-aside\css\angular-aside.css" />
+    <Content Include="Scripts\Vendors\angular-aside\css\angular-aside.min.css" />
+    <Content Include="Scripts\Vendors\angular-aside\js\angular-aside.js" />
+    <Content Include="Scripts\Vendors\angular-aside\js\angular-aside.min.js" />
+    <Content Include="Scripts\Vendors\angular-chart\angular-chart\angular-chart.js" />
+    <Content Include="Scripts\Vendors\angular-chart\angular-chart\dist\angular-chart.css" />
+    <Content Include="Scripts\Vendors\angular-chart\angular-chart\dist\angular-chart.js" />
+    <Content Include="Scripts\Vendors\angular-chart\angular-chart\dist\angular-chart.min.js" />
+    <Content Include="Scripts\Vendors\angular-chart\angular-chart\gulpfile.js" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\Chart.js" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\Chart.min.js" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\gulpfile.js" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\samples\bar.html" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\samples\doughnut.html" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\samples\line-customTooltips.html" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\samples\line.html" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\samples\pie-customTooltips.html" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\samples\pie.html" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\samples\polar-area.html" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\samples\radar.html" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\src\Chart.Bar.js" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\src\Chart.Core.js" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\src\Chart.Doughnut.js" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\src\Chart.Line.js" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\src\Chart.PolarArea.js" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\src\Chart.Radar.js" />
+    <Content Include="Scripts\Vendors\angular-dynamic-locale\tmhDynamicLocale.js" />
+    <Content Include="Scripts\Vendors\angular-dynamic-locale\tmhDynamicLocale.min.js" />
+    <Content Include="Scripts\Vendors\angular-filter\angular-filter.min.js" />
+    <Content Include="Scripts\Vendors\angular-mask\ngMask.js" />
+    <Content Include="Scripts\Vendors\angular-mask\ngMask.min.js" />
+    <Content Include="Scripts\Vendors\angular-signalr-hub\signalr-hub.js" />
+    <Content Include="Scripts\Vendors\angular-signalr-hub\signalr-hub.min.js" />
+    <Content Include="Scripts\Vendors\angular-slider\angular-slider.css" />
+    <Content Include="Scripts\Vendors\angular-slider\angular-slider.js" />
+    <Content Include="Scripts\Vendors\angular-smooth-scroll\angular-smooth-scroll.js" />
+    <Content Include="Scripts\Vendors\angular-smooth-scroll\angular-smooth-scroll.min.js" />
+    <Content Include="Scripts\Vendors\angular-translate-loader-url\angular-translate-loader-url.js" />
+    <Content Include="Scripts\Vendors\angular-translate-loader-url\angular-translate-loader-url.min.js" />
+    <Content Include="Scripts\Vendors\angular-translate\angular-translate.js" />
+    <Content Include="Scripts\Vendors\angular-translate\angular-translate.min.js" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\app.js" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\bootstrap-responsive.css" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\bootstrap.css" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\demo.css" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\github-16px.png" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\header.png" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\img\glyphicons-halflings-white.png" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\img\glyphicons-halflings.png" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\plunker.js" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\rainbow-generic.js" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\rainbow-html.js" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\rainbow-javascript.js" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\rainbow.css" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\rainbow.js" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\select2.css" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\select2.js" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\select2.png" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\smoothscroll-angular-custom.js" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\uglifyjs.js" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\ui-select2.js" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\index.html" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\ui-bootstrap-0.12.0.js" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\ui-bootstrap-0.12.0.min.js" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\ui-bootstrap-tpls-0.12.0.js" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\ui-bootstrap-tpls-0.12.0.min.js" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\ui-bootstrap-tpls-0.12.1.js" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\ui-bootstrap-tpls-0.12.1.min.js" />
+    <Content Include="Scripts\Vendors\angular-ui-notification\angular-ui-notification.html" />
+    <Content Include="Scripts\Vendors\angular-ui-notification\angular-ui-notification.js" />
+    <Content Include="Scripts\Vendors\angular-ui-notification\angular-ui-notification.min.css" />
+    <Content Include="Scripts\Vendors\angular-ui-router\angular-ui-router.js" />
+    <Content Include="Scripts\Vendors\angular-ui-router\angular-ui-router.min.js" />
+    <Content Include="Scripts\Vendors\angular-ui-select\select.css" />
+    <Content Include="Scripts\Vendors\angular-ui-select\select.js" />
+    <Content Include="Scripts\Vendors\angular-ui-select\select.min.css" />
+    <Content Include="Scripts\Vendors\angular-ui-select\select.min.js" />
+    <Content Include="Scripts\Vendors\angular-ui-util\ui-utils-ieshiv.js" />
+    <Content Include="Scripts\Vendors\angular-ui-util\ui-utils-ieshiv.min.js" />
+    <Content Include="Scripts\Vendors\angular-ui-util\ui-utils.js" />
+    <Content Include="Scripts\Vendors\angular-ui-util\ui-utils.min.js" />
+    <Content Include="Scripts\Vendors\angularAMD\angularAMD.js" />
+    <Content Include="Scripts\Vendors\angularAMD\angularAMD.min.js" />
+    <Content Include="Scripts\Vendors\angularAMD\ngload.js" />
+    <Content Include="Scripts\Vendors\angularAMD\ngload.min.js" />
+    <Content Include="Scripts\Vendors\angulartics\angulartics-ga-cordova-google-analytics-plugin.js" />
+    <Content Include="Scripts\Vendors\angulartics\angulartics-ga-cordova.js" />
+    <Content Include="Scripts\Vendors\angulartics\angulartics-ga.js" />
+    <Content Include="Scripts\Vendors\angulartics\angulartics.js" />
+    <Content Include="Scripts\Vendors\angular\angular-animate.js" />
+    <Content Include="Scripts\Vendors\angular\angular-animate.min.js" />
+    <Content Include="Scripts\Vendors\angular\angular-sanitize.js" />
+    <Content Include="Scripts\Vendors\angular\angular-sanitize.min.js" />
+    <Content Include="Scripts\Vendors\angular\angular.js" />
+    <Content Include="Scripts\Vendors\angular\angular.min.js" />
+    <Content Include="Scripts\Vendors\angular\locales\angular-locale_en-us.js" />
+    <Content Include="Scripts\Vendors\angular\locales\angular-locale_es-es.js" />
+    <Content Include="Scripts\Vendors\angular\locales\angular-locale_fr-fr.js" />
+    <Content Include="Scripts\Vendors\angular\locales\angular-locale_pt-br.js" />
+    <Content Include="Scripts\Vendors\bootstrap\bootstrap.min.css" />
+    <Content Include="Scripts\Vendors\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\Vendors\jquery.range\jquery.range.css" />
+    <Content Include="Scripts\Vendors\jquery.range\jquery.range.js" />
+    <Content Include="Scripts\Vendors\jquery\jquery.min.js" />
+    <Content Include="Scripts\Vendors\less\less.min.js" />
+    <Content Include="Scripts\Vendors\ngAutocomplete\ngAutocomplete.js" />
+    <Content Include="Scripts\Vendors\ngStats\ng-stats.js" />
+    <Content Include="Scripts\Vendors\ngStorage\ngStorage.js" />
+    <Content Include="Scripts\Vendors\ngStorage\ngStorage.min.js" />
+    <Content Include="Scripts\Vendors\perfect-scrollbar\css\perfect-scrollbar.css" />
+    <Content Include="Scripts\Vendors\perfect-scrollbar\css\perfect-scrollbar.min.css" />
+    <Content Include="Scripts\Vendors\perfect-scrollbar\perfect-scrollbar.jquery.js" />
+    <Content Include="Scripts\Vendors\perfect-scrollbar\perfect-scrollbar.js" />
+    <Content Include="Scripts\Vendors\requirejs\plugins\async.js" />
+    <Content Include="Scripts\Vendors\requirejs\plugins\depend.js" />
+    <Content Include="Scripts\Vendors\requirejs\plugins\font.js" />
+    <Content Include="Scripts\Vendors\requirejs\plugins\goog.js" />
+    <Content Include="Scripts\Vendors\requirejs\plugins\image.js" />
+    <Content Include="Scripts\Vendors\requirejs\plugins\json.js" />
+    <Content Include="Scripts\Vendors\requirejs\plugins\mdown.js" />
+    <Content Include="Scripts\Vendors\requirejs\plugins\noext.js" />
+    <Content Include="Scripts\Vendors\requirejs\plugins\propertyParser.js" />
+    <Content Include="Scripts\Vendors\requirejs\require.js" />
+    <Content Include="Scripts\Vendors\requirejs\require.min.js" />
+    <Content Include="Scripts\Vendors\signalr\jquery.signalR.js" />
+    <Content Include="Scripts\Vendors\signalr\jquery.signalR.min.js" />
+    <Content Include="Scripts\Vendors\smart-table\smart-table.debug.js" />
+    <Content Include="Scripts\Vendors\smart-table\smart-table.min.js" />
+    <Content Include="Views\ClubTravel\ClubTravel.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\Controllers\Company\CompanyController.cs" />
+    <Compile Include="Api\Controllers\Employee\EmployeeController.cs" />
+    <Compile Include="Api\WebApiConfig.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\Vendors\angular-chart\angular-chart\.bower.json" />
+    <Content Include="Scripts\Vendors\angular-chart\angular-chart\angular-chart.less" />
+    <Content Include="Scripts\Vendors\angular-chart\angular-chart\bower.json" />
+    <Content Include="Scripts\Vendors\angular-chart\angular-chart\dist\angular-chart.css.map" />
+    <Content Include="Scripts\Vendors\angular-chart\angular-chart\dist\angular-chart.js.tar.gz" />
+    <Content Include="Scripts\Vendors\angular-chart\angular-chart\dist\angular-chart.min.js.map" />
+    <Content Include="Scripts\Vendors\angular-chart\angular-chart\LICENSE" />
+    <Content Include="Scripts\Vendors\angular-chart\angular-chart\package.json" />
+    <Content Include="Scripts\Vendors\angular-chart\angular-chart\README.md" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\.bower.json" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\.gitignore" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\.travis.yml" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\bower.json" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\CONTRIBUTING.md" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\docs\00-Getting-Started.md" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\docs\01-Line-Chart.md" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\docs\02-Bar-Chart.md" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\docs\03-Radar-Chart.md" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\docs\04-Polar-Area-Chart.md" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\docs\05-Pie-Doughnut-Chart.md" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\docs\06-Advanced.md" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\docs\07-Notes.md" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\LICENSE.md" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\package.json" />
+    <Content Include="Scripts\Vendors\angular-chart\chartjs\README.md" />
+    <Content Include="Scripts\Vendors\angular-signalr-hub\.bower.json" />
+    <Content Include="Scripts\Vendors\angular-signalr-hub\.gitignore" />
+    <Content Include="Scripts\Vendors\angular-signalr-hub\bower.json" />
+    <Content Include="Scripts\Vendors\angular-signalr-hub\LICENSE" />
+    <Content Include="Scripts\Vendors\angular-signalr-hub\README.md" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\module-mapping.json" />
+    <Content Include="Scripts\Vendors\angular-ui-bootstrap\assets\raw-files.json" />
+    <Content Include="Scripts\Vendors\angularAMD\.bower.json" />
+    <Content Include="Scripts\Vendors\angularAMD\angularAMD.min.map" />
+    <Content Include="Scripts\Vendors\angularAMD\bower.json" />
+    <Content Include="Scripts\Vendors\angularAMD\ngload.min.map" />
+    <Content Include="Scripts\Vendors\angularAMD\README.md" />
+    <Content Include="Scripts\Vendors\angular\angular-animate.min.js.map" />
+    <Content Include="Scripts\Vendors\angular\angular-sanitize.min.js.map" />
+    <Content Include="Scripts\Vendors\angular\angular.min.js.map" />
+    <Content Include="Scripts\Vendors\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\Vendors\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Scripts\Vendors\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bin\WebApp1.dll.config" />
+    <Content Include="bin\Newtonsoft.Json.dll.refresh" />
+    <Content Include="bin\System.Web.Http.dll.refresh" />
+    <Content Include="bin\System.Web.Http.WebHost.dll.refresh" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Api\Models\" />
+    <Folder Include="Scripts\Directives\" />
+    <Folder Include="Scripts\Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{6055b062-cd9f-40bc-9804-3fa85e2ac2d4}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{F9AE49A1-A5E5-490C-871A-138A4FBCC238}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57574</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57574/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

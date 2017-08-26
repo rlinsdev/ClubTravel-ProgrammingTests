@@ -1,0 +1,139 @@
+﻿<br />
+<div class="container iconesHome" ng-cloak>
+    <div class="row pad">
+        <div class="col-md-2 col-xs-6 col-sm-4"></div>
+        <div class="col-md-2 col-xs-6 col-sm-4">
+            <a ng-click="findEmployByCompany()" class="hand">
+                <div>
+                    <label><i class="fa fa-address-card  fa-5x hand"></i></label>
+                    <br />
+                    <span>Employees by Company</span>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-2 col-xs-6 col-sm-4">
+            <a ng-click="findAllCompanies()" class="hand">
+                <div>
+                    <label><i class="fa fa-building fa-5x hand"></i></label>
+                    <br />
+                    <span>All Companies</span>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-2 col-xs-6 col-sm-4">
+            <a ng-click="getSumAges()" class="hand">
+                <div>
+                    <label><i class="fa fa-group fa-5x hand"></i></label>
+                    <br />
+                    <span>Years all Employees</span>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-2 col-xs-6 col-sm-4">
+            <a ng-click="getSumCompanies()" class="hand">
+                <div>
+                    <label><i class="fa fa-tachometer fa-5x hand"></i></label>
+                    <br />
+                    <span>Count of companies</span>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-2 col-xs-6 col-sm-4"></div>
+    </div>
+</div>
+<hr />
+
+<br />
+<div class="col-md-12 col-xs-12 pad" ng-show="paineEmployee">
+    <div class="col-md-6 col-xs-6 pad">
+        <div class="panel panel-success">
+            <div class="panel-heading">Search Employees by company name</div>
+            <div class="panel-body">
+                <label>Company</label>
+                <select class="form-control" name="companyName" ng-model="companyName" ng-change="findEmployByCompany()">
+                    <option value="{{company.Name}}" ng-repeat="company in resultInit">{{company.Name}}</option>
+                </select>
+                <div class="input-group col-md-6 col-xs-6 pad">
+                    <label><input type="checkbox" ng-model="stillEmployed" ng-checked="stillEmployed" />Ex Employee</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-12 col-xs-12 pad">
+    <div class="alert alert-warning" ng-show="noResult">
+        Sorry, no results...
+    </div>
+</div>
+<div class="col-md-12 col-xs-12 pad">
+    <div class="alert alert-info" ng-show="sumAges">
+        The total number of years that all employees is <strong>{{sumAges}}</strong> years.
+    </div>
+    <div class="alert alert-info" ng-show="sumCompanies">
+        The total number of companies is <strong>{{sumCompanies}}</strong>.
+    </div>
+</div>
+
+<div class="col-md-11 col-xs-11 pad" ng-show="employees">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Employee Name</th>
+                <th>Address Line 1</th>
+                <th>Employment Start Date</th>
+                <th>Employment End Date</th>
+                <th>Number Of Years Employed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in employees" ng-show="(item.EmploymentEndDate && stillEmployed) ||(!stillEmployed && !item.EmploymentEndDate)">
+                <th scope="row">{{$index+1}}</th>
+                <td>{{item.Employee.Name}}</td>
+                <td>{{item.Employee.AddressLine1}}</td>
+                <td>{{item.EmploymentStartDate | date: 'dd/MM/yyyy'}}</td>
+                <td ng-show="item.EmploymentEndDate">{{item.EmploymentEndDate | date: 'dd/MM/yyyy'}}</td>
+                <td class="success" ng-show="!item.EmploymentEndDate"><b>Still Employed</b></td>
+                <td>{{item.NumberOfYearsEmployed}}</td>
+            </tr>
+            <tr ng-show="newReg">
+                <th scope="row"></th>
+                <td><input type="text" class="form-control" ng-model="newReg.Employee.Name" placeholder="Employee name"></td>
+                <td><input type="text" class="form-control" ng-model="newReg.Employee.AddressLine1" placeholder="Address 1"></td>
+                <td><label>{{newReg.EmploymentStartDate | date:'dd/MM/yyyy'}}</label></td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-success" ng-click="addNewEmployee()" ng-show="showAddNewEmployee">Add new Employee</button>
+    <button class="btn btn-info" ng-click="saveNewEmployee()" ng-show="showSaveNewEmployee">Save</button>
+    <button class="btn btn-warning" ng-click="cancelNewEmployee()" ng-show="showCancelNewEmployee">Cancel</button>    
+</div>
+<div class="col-md-11 col-xs-11 pad" ng-show="companies">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Company Name</th>
+                <th>Address Line 1</th>
+                <th>Address Line 2</th>
+                <th>Address Line 3</th>
+                <th>Address Line 4</th>
+                <th>Employer Registered Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="company in companies">
+                <th scope="row">{{$index + 1}}</th>
+                <td>{{company.Name}}</td>
+                <td>{{company.AddressLine1}}</td>
+                <td>{{company.AddressLine2}}</td>
+                <td>{{company.AddressLine3}}</td>
+                <td>{{company.AddressLine4}}</td>
+                <td>{{company.EmployerRegisteredNumber}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
